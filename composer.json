@@ -1,0 +1,20 @@
+{
+  "name": "viliy/design-patterns",
+  "license": "MIT",
+  "description": "Nothing",
+  "authors": [
+    {
+      "name": "viliy",
+      "email": "qiuxiaoweioo@qq.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "phpunit/phpunit": "^5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "viliy\\DesignPatterns\\": "src/"
+    }
+  }
+}
