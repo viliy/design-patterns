@@ -49,7 +49,7 @@ final class Instance
 
     public function mmp()
     {
-        echo 'MMP';
+        echo 'God';
     }
 
     public function fuck()

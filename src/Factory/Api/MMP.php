@@ -14,6 +14,6 @@ class MMP extends ApiAbstract
 {
     public function getResult()
     {
-        echo 'MMP';
+        echo 'God';
     }
 }

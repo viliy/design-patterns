@@ -16,7 +16,7 @@ class MMP extends ResponsibilityAbstract
 
     public function getResult()
     {
-        echo 'MMP';
+        echo 'God';
     }
 
     function getMaster($level = null)
