@@ -10,16 +10,11 @@ require __DIR__ .'/vendor/autoload.php';
 
 $fuck = new \ZhaQ\DesignPatterns\Decorator\Fcuk('FUCK');
 
-var_dump($fuck->data);
-
 $mmp = new \ZhaQ\DesignPatterns\Decorator\Mmp($fuck);
 
-var_dump($fuck->data);
-
+var_dump($mmp->getComponent());
+var_dump($mmp->doStep());
 
 $wtf = new \ZhaQ\DesignPatterns\Decorator\Wtf($mmp);
 
-
-var_dump($fuck->data);
-
-
+var_dump($wtf->doStep());

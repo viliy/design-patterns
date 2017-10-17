@@ -12,18 +12,13 @@ namespace ZhaQ\DesignPatterns\Decorator;
 
 class Fcuk extends DecoratorBase
 {
-    public $data;
-
     public function __construct($string)
     {
-        $this->doStep($string);
+        $this->data[] = $string;
     }
 
-    /**
-     * 当前流水线操作
-     */
-    public function doStep(string $string)
+    public function doStep()
     {
-        $this->data[] = $string;
+        return $this->data;
     }
 }

@@ -15,6 +15,13 @@ class Mmp extends DecoratorAbstract
     public function __construct(DecoratorBase $component)
     {
         parent::__construct($component);
-        $this->component->doStep('MMP');
+        $this->component = $component;
+        $this->doStep();
+    }
+
+    public function doStep()
+    {
+        parent::doStep();
+        return  array_merge($this->component->doStep(), ['mmp']);
     }
 }

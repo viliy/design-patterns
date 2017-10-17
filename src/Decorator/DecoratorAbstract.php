@@ -16,14 +16,14 @@ namespace ZhaQ\DesignPatterns\Decorator;
 abstract class DecoratorAbstract extends DecoratorBase
 {
     /**
-     * @var
-     */
-    protected $decorator;
-
-    /**
      * @var DecoratorBase
      */
     protected $component;
+
+    /**
+     * @var
+     */
+    protected $content;
 
     /**
      * DecoratorAbstract constructor.
@@ -34,12 +34,19 @@ abstract class DecoratorAbstract extends DecoratorBase
         $this->component = $component;
     }
 
+
     /**
-     * @param $string
+     * @return array
      */
-    public function doStep(string $string)
+    public function doStep()
     {
-        $this->component->data[] = $string;
+        echo get_called_class() . PHP_EOL;
+
+        return $this->data;
+    }
+
+    public function getComponent()
+    {
         return $this->component;
     }
 }

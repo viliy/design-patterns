@@ -12,10 +12,18 @@ namespace ZhaQ\DesignPatterns\Decorator;
 
 class Wtf extends DecoratorAbstract
 {
-
     public function __construct(DecoratorBase $component)
     {
         parent::__construct($component);
-        $this->component->doStep('WTF');
+        $this->component = $component;
+        $this->doStep();
+    }
+
+    public function doStep()
+    {
+        parent::getData();
+        return  array_merge($this->component->doStep(), ['wtf']);
+
+
     }
 }

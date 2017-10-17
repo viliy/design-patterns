@@ -18,8 +18,13 @@ namespace ZhaQ\DesignPatterns\Decorator;
 abstract class DecoratorBase
 {
     protected $data = [];
-    /**
-     * 当前流水线操作
-     */
-    abstract function doStep(string $string);
+
+    protected $content;
+
+    public function getData()
+    {
+        return $this->data;
+    }
+
+    abstract public function doStep();
 }
